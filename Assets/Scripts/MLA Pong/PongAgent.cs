@@ -39,7 +39,12 @@ public class PongAgent : Agent
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
-        ActionSegment<int> discreteActions = actionsOut.DiscreteActions;
+        //TODO implement player input system
+    }
+
+    public override void OnActionReceived(ActionBuffers actions)
+    {
+        ActionSegment<int> discreteActions = actions.DiscreteActions;
         switch (discreteActions[0])
         {
             case 0: //Up
@@ -49,11 +54,6 @@ public class PongAgent : Agent
             default: //Down
                 break;
         }
-    }
-
-    public override void OnActionReceived(ActionBuffers actions)
-    {
-        //TODO do something or not.
     }
 
 
