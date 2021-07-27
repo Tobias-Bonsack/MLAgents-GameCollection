@@ -10,6 +10,7 @@ public class PongAgent : Agent
 
     [Header("Observations")]
     [SerializeField] GameObject ball;
+    [SerializeField] int obsBallDirSign;
 
     [Header("Others")]
     [SerializeField] GameObject manager;
@@ -24,13 +25,12 @@ public class PongAgent : Agent
         //TODO normalize as many as possible
 
         // Observations from itself
-        sensor.AddObservation(transform.localPosition.x);
         sensor.AddObservation(transform.localPosition.z);
-
+        // absolute distance to ball
+        sensor.AddObservation(Mathf.Abs(ball.transform.localPosition.x - transform.localPosition.x));
         // observations from the ball
-        sensor.AddObservation(ball.gameObject.transform.localPosition.x);
         sensor.AddObservation(ball.gameObject.transform.localPosition.z);
-        sensor.AddObservation(ball.gameObject.GetComponent<BallMovement>().direction.x);
+        sensor.AddObservation(ball.gameObject.GetComponent<BallMovement>().direction.x * obsBallDirSign);
         sensor.AddObservation(ball.gameObject.GetComponent<BallMovement>().direction.z);
         sensor.AddObservation(ball.gameObject.GetComponent<BallMovement>().speed);
     }
