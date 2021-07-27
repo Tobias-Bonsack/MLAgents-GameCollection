@@ -52,7 +52,7 @@ public class BallMovement : AbstractResetEpisode
             //Agent things
             if (other.gameObject.TryGetComponent<PongAgent>(out PongAgent pongAgent))
             {
-                pongAgent.AddExternalReward(0.2f);
+                pongAgent.AddExternalReward(0.5f);
             }
         }
     }
@@ -64,6 +64,7 @@ public class BallMovement : AbstractResetEpisode
         if (other.gameObject.TryGetComponent<GoalLogic>(out GoalLogic goalLogic))
         {
             goalLogic.triggered();
+            this.ResetGameObject();
         }
 
     }

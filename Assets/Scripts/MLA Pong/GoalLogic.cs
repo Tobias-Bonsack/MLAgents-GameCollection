@@ -6,11 +6,13 @@ using Pong;
 public class GoalLogic : MonoBehaviour
 {
 
-    [SerializeField] GameObject relatedAgent;
+    [SerializeField] GameObject protector;
+    [SerializeField] GameObject attacker;
 
     public void triggered() {
-        relatedAgent.GetComponent<PongLife>().isHitted();
-        relatedAgent.GetComponent<PongAgent>().AddExternalReward(-1f);
+        protector.GetComponent<PongLife>().isHitted();
+        protector.GetComponent<PongAgent>().AddExternalReward(-1f);
+        attacker.GetComponent<PongAgent>().AddExternalReward(0.5f);
     }
 
 }

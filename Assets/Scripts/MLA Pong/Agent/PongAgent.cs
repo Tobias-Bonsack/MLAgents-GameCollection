@@ -10,7 +10,6 @@ public class PongAgent : Agent
 
     [Header("Observations")]
     [SerializeField] GameObject ball;
-    [SerializeField] GameObject enemy;
 
     [Header("Others")]
     [SerializeField] GameObject manager;
@@ -25,8 +24,8 @@ public class PongAgent : Agent
         //TODO normalize as many as possible
 
         // Observations from itself
-        sensor.AddObservation(this.gameObject.transform.localPosition.x);
-        sensor.AddObservation(this.gameObject.transform.localPosition.z);
+        sensor.AddObservation(transform.localPosition.x);
+        sensor.AddObservation(transform.localPosition.z);
 
         // observations from the ball
         sensor.AddObservation(ball.gameObject.transform.localPosition.x);
@@ -34,11 +33,6 @@ public class PongAgent : Agent
         sensor.AddObservation(ball.gameObject.GetComponent<BallMovement>().direction.x);
         sensor.AddObservation(ball.gameObject.GetComponent<BallMovement>().direction.z);
         sensor.AddObservation(ball.gameObject.GetComponent<BallMovement>().speed);
-
-        // observations from the enemy
-        sensor.AddObservation(enemy.gameObject.transform.localPosition.x);
-        sensor.AddObservation(enemy.gameObject.transform.localPosition.z);
-
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)

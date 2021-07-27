@@ -1,0 +1,22 @@
+default_settings: null
+behaviors:
+  Pong:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 1024
+      buffer_size: 10240
+    network_settings:
+      hidden_units: 32
+      num_layers: 2
+      memory: null
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    checkpoint_interval: 100000
+    max_steps: 500000
+    summary_freq: 25000
+    self_play:
+      save_steps: 20000
+      team_change: 100000
+      swap_steps: 10000
