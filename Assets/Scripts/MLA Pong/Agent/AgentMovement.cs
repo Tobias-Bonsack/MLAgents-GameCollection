@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AgentMovement : MonoBehaviour
+public class AgentMovement : AbstractResetEpisode
 {
 
     [SerializeField] int moveSpeed;
+    [SerializeField] GameObject manager;
+    private Vector3 originLocPos;
+
+    private void Awake() {
+        this.AddToEvent(manager);
+        this.originLocPos = transform.localPosition;
+    }
 
     public void moveUp()
     {
@@ -19,4 +26,8 @@ public class AgentMovement : MonoBehaviour
         transform.localPosition += dir;
     }
 
+    protected override void ResetGameObject()
+    {
+        transform.localPosition = originLocPos;
+    }
 }

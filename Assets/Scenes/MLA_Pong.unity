@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e2a9970e3e6074580894680733321c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relatedAgent: {fileID: 0}
+  relatedAgent: {fileID: 1698038355}
 --- !u!1 &264974798
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +462,7 @@ Transform:
   - {fileID: 1102648593}
   - {fileID: 958719140}
   - {fileID: 168665042}
+  - {fileID: 1869609014}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -539,7 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e2a9970e3e6074580894680733321c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relatedAgent: {fileID: 0}
+  relatedAgent: {fileID: 1451527364}
 --- !u!1 &997847874
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,6 +822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   direction: {x: 1, y: 0, z: 0}
+  manager: {fileID: 1869609010}
 --- !u!1 &1451527364
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +840,7 @@ GameObject:
   - component: {fileID: 1451527373}
   - component: {fileID: 1451527370}
   - component: {fileID: 1451527372}
+  - component: {fileID: 1451527374}
   m_Layer: 0
   m_Name: Blue Agent
   m_TagString: Agent
@@ -955,6 +958,7 @@ MonoBehaviour:
   MaxStep: 0
   ball: {fileID: 1135291017}
   enemy: {fileID: 1698038355}
+  manager: {fileID: 1869609010}
 --- !u!114 &1451527371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -998,6 +1002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
+  manager: {fileID: 1869609010}
 --- !u!114 &1451527373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,6 +1017,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DecisionPeriod: 10
   TakeActionsBetweenDecisions: 1
+--- !u!114 &1451527374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451527364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50607c10677eff448b76bf1813b8fa0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1869609010}
+  life: 3
+  shownLife: []
 --- !u!1 &1489329485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,6 +1270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
+  manager: {fileID: 1869609010}
 --- !u!1 &1869609010
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,10 +1367,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869609010}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.6792659, y: -5.1828203, z: 7.197342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 538904388}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

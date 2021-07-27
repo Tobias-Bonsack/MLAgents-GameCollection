@@ -69,5 +69,12 @@ public class PongAgent : Agent
         }
     }
 
+    public void AddExternalReward(float reward) {
+        AddReward(reward);
+    }
+
+    public void EndExternalEpisode() {
+        EndEpisode();
+    }
 
 }
