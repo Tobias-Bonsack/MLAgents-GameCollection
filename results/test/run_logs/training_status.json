@@ -1,24 +1,51 @@
 {
     "Pong": {
-        "elo": 1200.0,
         "checkpoints": [
             {
-                "steps": 0,
-                "file_path": "results\\test\\Pong\\Pong-0.onnx",
-                "reward": null,
-                "creation_time": 1627398602.1855114,
+                "steps": 99966,
+                "file_path": "results\\test\\Pong\\Pong-99966.onnx",
+                "reward": 3.375,
+                "creation_time": 1627399742.3053563,
                 "auxillary_file_paths": [
-                    "results\\test\\Pong\\Pong-0.pt"
+                    "results\\test\\Pong\\Pong-99966.pt"
+                ]
+            },
+            {
+                "steps": 199949,
+                "file_path": "results\\test\\Pong\\Pong-199949.onnx",
+                "reward": -0.13636363636363635,
+                "creation_time": 1627400063.6090066,
+                "auxillary_file_paths": [
+                    "results\\test\\Pong\\Pong-199949.pt"
+                ]
+            },
+            {
+                "steps": 299966,
+                "file_path": "results\\test\\Pong\\Pong-299966.onnx",
+                "reward": 3.75,
+                "creation_time": 1627400378.397006,
+                "auxillary_file_paths": [
+                    "results\\test\\Pong\\Pong-299966.pt"
+                ]
+            },
+            {
+                "steps": 351527,
+                "file_path": "results\\test\\Pong\\Pong-351527.onnx",
+                "reward": -0.8888888888888888,
+                "creation_time": 1627400536.5566294,
+                "auxillary_file_paths": [
+                    "results\\test\\Pong\\Pong-351527.pt"
                 ]
             }
         ],
+        "elo": 1200.0,
         "final_checkpoint": {
-            "steps": 0,
+            "steps": 351527,
             "file_path": "results\\test\\Pong.onnx",
-            "reward": null,
-            "creation_time": 1627398602.1855114,
+            "reward": -0.8888888888888888,
+            "creation_time": 1627400536.5566294,
             "auxillary_file_paths": [
-                "results\\test\\Pong\\Pong-0.pt"
+                "results\\test\\Pong\\Pong-351527.pt"
             ]
         }
     },

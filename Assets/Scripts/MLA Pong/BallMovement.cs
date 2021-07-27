@@ -6,7 +6,7 @@ public class BallMovement : AbstractResetEpisode
 {
 
     [Header("Observations")]
-    public float speed = 1;
+    public float speed;
     public Vector3 direction;
 
     [Header("Others")]
@@ -19,7 +19,7 @@ public class BallMovement : AbstractResetEpisode
     protected override void ResetGameObject()
     {
         transform.localPosition = originPoint;
-        this.speed = 1f;
+        this.speed = 2f;
         this.direction = Vector3.right;
     }
 
