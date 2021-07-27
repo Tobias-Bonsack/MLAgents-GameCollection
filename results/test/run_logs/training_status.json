@@ -2,50 +2,59 @@
     "Pong": {
         "checkpoints": [
             {
-                "steps": 99966,
-                "file_path": "results\\test\\Pong\\Pong-99966.onnx",
-                "reward": 3.375,
-                "creation_time": 1627399742.3053563,
+                "steps": 199969,
+                "file_path": "results\\test\\Pong\\Pong-199969.onnx",
+                "reward": 1.625,
+                "creation_time": 1627410961.980275,
                 "auxillary_file_paths": [
-                    "results\\test\\Pong\\Pong-99966.pt"
+                    "results\\test\\Pong\\Pong-199969.pt"
                 ]
             },
             {
-                "steps": 199949,
-                "file_path": "results\\test\\Pong\\Pong-199949.onnx",
-                "reward": -0.13636363636363635,
-                "creation_time": 1627400063.6090066,
+                "steps": 299993,
+                "file_path": "results\\test\\Pong\\Pong-299993.onnx",
+                "reward": 1.125,
+                "creation_time": 1627411288.5434084,
                 "auxillary_file_paths": [
-                    "results\\test\\Pong\\Pong-199949.pt"
+                    "results\\test\\Pong\\Pong-299993.pt"
                 ]
             },
             {
-                "steps": 299966,
-                "file_path": "results\\test\\Pong\\Pong-299966.onnx",
-                "reward": 3.75,
-                "creation_time": 1627400378.397006,
+                "steps": 399993,
+                "file_path": "results\\test\\Pong\\Pong-399993.onnx",
+                "reward": null,
+                "creation_time": 1627411613.644399,
                 "auxillary_file_paths": [
-                    "results\\test\\Pong\\Pong-299966.pt"
+                    "results\\test\\Pong\\Pong-399993.pt"
                 ]
             },
             {
-                "steps": 351527,
-                "file_path": "results\\test\\Pong\\Pong-351527.onnx",
-                "reward": -0.8888888888888888,
-                "creation_time": 1627400536.5566294,
+                "steps": 499999,
+                "file_path": "results\\test\\Pong\\Pong-499999.onnx",
+                "reward": -0.6,
+                "creation_time": 1627411948.6894963,
                 "auxillary_file_paths": [
-                    "results\\test\\Pong\\Pong-351527.pt"
+                    "results\\test\\Pong\\Pong-499999.pt"
+                ]
+            },
+            {
+                "steps": 500018,
+                "file_path": "results\\test\\Pong\\Pong-500018.onnx",
+                "reward": -0.14285714285714285,
+                "creation_time": 1627411949.8035448,
+                "auxillary_file_paths": [
+                    "results\\test\\Pong\\Pong-500018.pt"
                 ]
             }
         ],
         "elo": 1200.0,
         "final_checkpoint": {
-            "steps": 351527,
+            "steps": 500018,
             "file_path": "results\\test\\Pong.onnx",
-            "reward": -0.8888888888888888,
-            "creation_time": 1627400536.5566294,
+            "reward": -0.14285714285714285,
+            "creation_time": 1627411949.8035448,
             "auxillary_file_paths": [
-                "results\\test\\Pong\\Pong-351527.pt"
+                "results\\test\\Pong\\Pong-500018.pt"
             ]
         }
     },
