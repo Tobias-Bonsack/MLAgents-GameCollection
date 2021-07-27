@@ -6,14 +6,16 @@ public class BallMovement : MonoBehaviour
 {
 
     [Header("Observations")]
-    public int speed;
+    public float speed = 1;
     public Vector3 direction;
 
     //Private things
     private Transform t;
+    private Vector3 originPoint;
 
     private void Awake() {
         this.t = GetComponent<Transform>();
+        this.originPoint = this.gameObject.transform.localPosition;
     }
 
     private void FixedUpdate() {
@@ -26,13 +28,17 @@ public class BallMovement : MonoBehaviour
         if(go.CompareTag("Wall")) { //If it hits a wall, mirror z-axis
             direction = new Vector3(direction.x, direction.y, -direction.z).normalized;
         } else if(go.CompareTag("Agent")) { // if it hits a agent(player), calculate new direction
-            //TODO change behavior to new one
-            direction = new Vector3(-direction.x, direction.y, direction.z).normalized;
+            Vector3 newDir = this.gameObject.transform.localPosition - go.transform.localPosition;
+            this.direction = newDir.normalized;
+            this.speed *= 1.01f;
         }
     }
 
-    //TODO: should reset the game, cost one life of enemy or give one point to scorrer
     private void OnTriggerEnter(Collider other) {
-        Destroy(this.gameObject); // if player scores one point
+        this.transform.localPosition = this.originPoint;
+
+        if(other.gameObject.TryGetComponent<GoalLogic>(out GoalLogic goalLogic)) {
+            goalLogic.triggered();
+        }
     }
 }
