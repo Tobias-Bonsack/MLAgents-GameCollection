@@ -44,7 +44,7 @@ namespace Pong
             GameObject go = other.gameObject;
             if (go.CompareTag("Wall"))
             { //If it hits a wall, mirror z-axis
-                direction = new Vector3(direction.x, direction.y, -direction.z).normalized;
+                direction = new Vector3(direction.x, direction.y, -direction.z * 0.99f).normalized;
             }
             else if (go.CompareTag("Agent"))
             { // if it hits a agent(player), calculate new direction
