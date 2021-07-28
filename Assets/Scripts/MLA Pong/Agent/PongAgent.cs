@@ -69,11 +69,13 @@ namespace Pong
 
         public void AddExternalReward(float reward)
         {
+            Debug.Log("Reward: " + reward);
             AddReward(reward);
         }
 
         public void EndExternalEpisode()
         {
+            Debug.Log("End Episode");
             EndEpisode();
         }
 

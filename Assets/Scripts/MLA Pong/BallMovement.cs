@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pong;
 
 namespace Pong
 {
+
+
     public class BallMovement : AbstractResetEpisode
     {
 
@@ -23,7 +24,7 @@ namespace Pong
         {
             transform.localPosition = originPoint;
             this.speed = 2f;
-            this.direction = Vector3.right;
+            this.direction = Random.Range(0, 2) == 1? Vector3.right : Vector3.left;
         }
 
         private void Awake()
@@ -44,7 +45,7 @@ namespace Pong
             GameObject go = other.gameObject;
             if (go.CompareTag("Wall"))
             { //If it hits a wall, mirror z-axis
-                direction = new Vector3(direction.x, direction.y, -direction.z * 0.98f).normalized;
+                direction = new Vector3(direction.x, direction.y, -direction.z * 0.95f).normalized;
             }
             else if (go.CompareTag("Agent"))
             { // if it hits a agent(player), calculate new direction
