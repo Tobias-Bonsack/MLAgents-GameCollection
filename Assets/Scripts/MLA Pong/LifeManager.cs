@@ -26,10 +26,18 @@ namespace Pong
 
         public void CurrentLife(int life)
         {
-            for (int i = 0; i < hearts.Length; i++)
+            if (life != 0)
             {
-                hearts[i].material = life > i ? heartMaterials[1] : heartMaterials[0];
+                StartCoroutine(KillHeart(hearts[life].GetComponent<MeshRenderer>()));
             }
+        }
+
+        private IEnumerator KillHeart(MeshRenderer heart)
+        {
+
+            heart.material = heartMaterials[2];
+            yield return new WaitForSeconds(1f);
+            heart.material = heartMaterials[0];
         }
 
     }
