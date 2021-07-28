@@ -2637,22 +2637,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5782472587915264861, guid: 9f6a0b76070b7234e8797d637a6f2f18, type: 3}
-      propertyPath: m_Model
-      value: 
-      objectReference: {fileID: 5022602860645237092, guid: 13a992c99e2627f4b8cf173bb8330b89, type: 3}
-    - target: {fileID: 5782472587915264861, guid: 9f6a0b76070b7234e8797d637a6f2f18, type: 3}
-      propertyPath: m_BehaviorType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782472588911791956, guid: 9f6a0b76070b7234e8797d637a6f2f18, type: 3}
-      propertyPath: m_Model
-      value: 
-      objectReference: {fileID: 5022602860645237092, guid: b8866bc7a8cf8e6418a751faf0c86217, type: 3}
-    - target: {fileID: 5782472588911791956, guid: 9f6a0b76070b7234e8797d637a6f2f18, type: 3}
-      propertyPath: m_BehaviorType
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5782472589700237522, guid: 9f6a0b76070b7234e8797d637a6f2f18, type: 3}
       propertyPath: m_RootOrder
       value: 2

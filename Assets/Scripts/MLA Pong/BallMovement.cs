@@ -11,6 +11,7 @@ namespace Pong
 
         [Header("Observations")]
         public float speed;
+        private float originSpeed;
         public Vector3 direction;
 
         [Header("Others")]
@@ -19,20 +20,20 @@ namespace Pong
         //Private things
         private Transform t;
         private Vector3 originPoint;
-
-        protected override void ResetGameObject()
-        {
-            transform.localPosition = originPoint;
-            this.speed = 2f;
-            this.direction = Random.Range(0, 2) == 1? Vector3.right : Vector3.left;
-        }
-
         private void Awake()
         {
             this.t = GetComponent<Transform>();
             this.originPoint = this.gameObject.transform.localPosition;
+            this.originSpeed = this.speed;
             this.AddToEvent(manager);
         }
+        protected override void ResetGameObject()
+        {
+            transform.localPosition = originPoint;
+            this.speed = this.originSpeed;
+            this.direction = Random.Range(0, 2) == 1? Vector3.right : Vector3.left;
+        }
+
 
         private void FixedUpdate()
         {
