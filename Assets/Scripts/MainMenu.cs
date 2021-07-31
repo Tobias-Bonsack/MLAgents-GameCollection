@@ -14,4 +14,9 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ToogleVisible(GameObject gameObject)
+    {
+        gameObject.SetActive(!gameObject.activeSelf);
+    }
 }
