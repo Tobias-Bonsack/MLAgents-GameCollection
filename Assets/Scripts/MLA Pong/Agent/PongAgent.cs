@@ -19,6 +19,8 @@ namespace Pong
         [Header("Others")]
         [SerializeField] GameObject manager;
 
+        [SerializeField] public bool isPlayer;
+
         public override void OnEpisodeBegin()
         {
             manager.GetComponent<EventManager>().TriggerSNEE();

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MLA_Pong;
 using UnityEngine;
 using Pong;
 
@@ -23,6 +24,8 @@ namespace Pong
             if (life <= 0)
             {
                 GetComponent<PongAgent>().EndExternalEpisode();
+                bool isPlayer = GetComponent<PongAgent>().isPlayer;
+                PlayAgain.Singleton.SetLooser(isPlayer);
             }
         }
 
