@@ -472,10 +472,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1581.599853515625,
-            "y": 169.6000518798828,
-            "width": 207.99998474121095,
-            "height": 302.39996337890627
+            "x": -1554.39990234375,
+            "y": 144.0,
+            "width": 208.0,
+            "height": 301.6000061035156
         }
     },
     "m_Slots": [
@@ -509,7 +509,7 @@
     "m_ShaderOutputName": "A",
     "m_StageCapability": 3,
     "m_Value": {
-        "e00": 0.20000000298023225,
+        "e00": 0.009999999776482582,
         "e01": 0.0,
         "e02": 0.0,
         "e03": 0.0,
@@ -908,7 +908,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Scale",
     "m_StageCapability": 3,
-    "m_Value": 5.0,
+    "m_Value": 10.0,
     "m_DefaultValue": 10.0,
     "m_Labels": []
 }
@@ -1152,9 +1152,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.404117226600647,
-        "g": 1.1549041271209717,
-        "b": 1.1768250465393067,
+        "r": 0.8133032321929932,
+        "g": 2.3166818618774416,
+        "b": 2.3536500930786135,
         "a": 0.0
     },
     "m_ColorMode": 1
@@ -1374,9 +1374,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.3128693699836731,
-        "g": 0.745901882648468,
-        "b": 0.7641509771347046,
+        "r": 0.4442862272262573,
+        "g": 0.7412199974060059,
+        "b": 0.7547169923782349,
         "a": 0.0
     },
     "m_ColorMode": 0
@@ -1501,7 +1501,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "CellDensity",
     "m_StageCapability": 3,
-    "m_Value": 5.0,
+    "m_Value": 10.0,
     "m_DefaultValue": 5.0,
     "m_Labels": []
 }
