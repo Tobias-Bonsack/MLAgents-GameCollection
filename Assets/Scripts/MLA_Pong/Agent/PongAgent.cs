@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -67,17 +68,8 @@ namespace Pong
             }
         }
 
-        public void AddExternalReward(float reward)
-        {
-            Debug.Log("Reward: " + reward);
-            AddReward(reward);
-        }
+        public void AddExternalReward(float reward) => AddReward(reward);
 
-        public void EndExternalEpisode()
-        {
-            Debug.Log("End Episode");
-            EndEpisode();
-        }
-
+        public void EndExternalEpisode() => this.EndEpisode();
     }
 }

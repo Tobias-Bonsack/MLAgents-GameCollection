@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pong;
+using System;
 
 namespace Pong
 {
@@ -9,6 +10,7 @@ namespace Pong
     {
         [SerializeField] GameObject manager;
         [SerializeField] LifeManager lifeManager;
+        [SerializeField] string gameOverText;
         public int life = 3;
 
         private void Awake()
@@ -22,7 +24,8 @@ namespace Pong
 
             if (life <= 0)
             {
-                GetComponent<PongAgent>().EndExternalEpisode();
+                this.manager.GetComponent<EventManager>().TriggerOnGameOver(this, new EventManager.OnGameOverEventArgs { winner = gameOverText });
+
             }
         }
 
