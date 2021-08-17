@@ -22,7 +22,6 @@ namespace Pong
         private void Start()
         {
             this.eventManager.OnGameOver += ActionOnGameOver;
-            Debug.Log("Event ok");
         }
 
         private void ActionOnGameOver(object sender, EventManager.OnGameOverEventArgs args)
