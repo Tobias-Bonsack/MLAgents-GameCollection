@@ -1,3 +1,6 @@
+# private ignores
+Assets/Environments/
+
 # Jetbrains IDE's e.g Rider
 .idea
 
