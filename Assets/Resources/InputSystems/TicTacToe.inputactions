@@ -1,0 +1,52 @@
+{
+    "name": "TicTacToe",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "c64f0bdb-954f-45ac-857f-c4fd21986884",
+            "actions": [
+                {
+                    "name": "Open Menu",
+                    "type": "Button",
+                    "id": "86000577-4b4d-4ef8-9be2-1a81e1d4e2a0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "f6ad025e-ccc8-4443-ad90-46674257dcac",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4ab415d0-b4d2-45c5-bf79-c776069a8500",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Open Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "41f8f404-d948-4002-8eac-2cb971967666",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
