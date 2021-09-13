@@ -7,6 +7,7 @@ namespace TicTacToe
 {
     public class Player : MonoBehaviour
     {
+        [SerializeField] GameObject _icon;
         public void OpenMenu(InputAction.CallbackContext context)
         {
             if (context.started)
@@ -19,13 +20,11 @@ namespace TicTacToe
         {
             if (context.started)
             {
-                Debug.Log(context.ToString());
                 Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
-                Debug.DrawLine(ray.origin, ray.GetPoint(10f), Color.red, 2f);
-
-                if (Physics.Raycast(ray, out RaycastHit hit))
+                if (Physics.Raycast(ray, out RaycastHit hit) && //
+                    hit.collider.gameObject.TryGetComponent<FieldManager>(out FieldManager fieldManager))
                 {
-                    Debug.Log(hit.collider.gameObject.name);
+                    fieldManager.SetIcon(_icon);
                 }
             }
         }
