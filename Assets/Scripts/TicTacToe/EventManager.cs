@@ -1,21 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace TicTacToe
 {
-    public class EventManager : MonoBehaviour
+    public class EventManager: MonoBehaviour
     {
-    	// Start is called before the first frame update
-    	void Start()
-    	{
-            
-    	}
+        #region events
+        public EventHandler<EventArgs> _onEndTurn;
+        #endregion
 
-    	// Update is called once per frame
-    	void Update()
-    	{
-            
-    	}
+        #region event args
+        #endregion
+
+        #region triggers
+        public void TriggerOnEndTurn() => _onEndTurn?.Invoke(null, null);
+        #endregion
+
     }
 }

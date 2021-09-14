@@ -10,26 +10,20 @@ namespace TicTacToe
         [SerializeField] GameObject _manager;
         private bool _isSet = false;
         private GameObject _icon = null;
-        // Start is called before the first frame update
-        void Start()
-        {
+        private bool? _playerID = null;
 
-        }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-
-        public bool SetIcon(GameObject icon)
+        public bool SetIcon(GameObject icon, bool playerID)
         {
             if (_isSet) return false;
 
-            _icon = Instantiate(icon, gameObject.transform);
+            _icon = Instantiate(icon, transform.parent.transform);
 
             _isSet = true;
+            _playerID = playerID;
             return _isSet;
         }
+
+        public bool? GetStatus() => _playerID;
     }
 }
