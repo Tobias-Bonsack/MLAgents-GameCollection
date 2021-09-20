@@ -530,7 +530,7 @@ MonoBehaviour:
   - {fileID: 538880807}
   - {fileID: 1921490747}
   - {fileID: 472566610}
-  _decisionDelay: 1
+  _decisionDelay: 0.25
 --- !u!4 &240752690
 Transform:
   m_ObjectHideFlags: 0
@@ -1977,7 +1977,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1902383532
 Transform:
@@ -2018,6 +2018,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _turnID: 1
+  _fieldManager:
+  - {fileID: 255839901}
+  - {fileID: 667295105}
+  - {fileID: 693039}
+  - {fileID: 1130876598}
+  - {fileID: 206378128}
+  - {fileID: 270457862}
+  - {fileID: 538880807}
+  - {fileID: 1921490747}
+  - {fileID: 472566610}
 --- !u!1001 &1921490744
 PrefabInstance:
   m_ObjectHideFlags: 0
