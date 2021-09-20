@@ -39,7 +39,7 @@ namespace TicTacToe
         {
             foreach (FieldManager fieldManager in _fields)
             {
-                int value = -1;
+                int value = -1; // does not happen
                 switch (fieldManager.GetStatus())
                 {
                     case null://is free
